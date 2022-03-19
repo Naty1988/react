@@ -1,9 +1,10 @@
 import CartWidget from "../CartWidget/CartWidget"
+import './NavBar.css'
 
 const NavBar = () => {
     return (
         <nav>
-            <h1 style={{ color: 'red'}}>Mariela Graziano Maquillajes</h1>
+            <h1>Mariela Graziano Maquillajes</h1>
             <button>Productos</button>
             <button>Artículos</button>
             <button>Kits</button>
