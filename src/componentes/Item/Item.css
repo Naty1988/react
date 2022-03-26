@@ -1,0 +1,21 @@
+.cardItemContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cardItem {
+    border: solid 1px grey;
+    padding: 50px;
+}
+
+.imgItem {
+    width: 150px;
+    height: 150px;
+}
+
+.cardItemBtn {
+    border: solid 1px black;
+    background-color: gray;
+    color: white;
+    width: auto;
+}
