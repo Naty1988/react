@@ -1,0 +1,10 @@
+.boxCount {
+    display: flex;
+    justify-content: center;
+}
+
+.btnCount {
+    border:  solid 1px gray;
+    background-color: beige;
+    width: auto;
+}
