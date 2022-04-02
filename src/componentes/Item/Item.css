@@ -17,5 +17,7 @@
     border: solid 1px black;
     background-color: gray;
     color: white;
-    width: auto;
+    width: 150px;
+    text-decoration: none;
+    padding: 10px;
 }
