@@ -1,15 +1,18 @@
 nav {
     width: 100px;
-    background-color: beige;
+    background-color: rgb(206, 206, 197);
     display: flex;
     text-align: center;
     width: 100%;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 h1 {
     font-style: italic;
+    text-decoration: none;
+    border-style: none;
 }
 
 button {
@@ -26,3 +29,25 @@ button {
     margin-bottom: 10px;
     margin: 20px;
     }
+
+.Option {
+    text-decoration: none;
+    border-radius: 5%;
+    margin: 0 50px;
+    width: 100px;
+    padding: 5px;
+    font-size: 0,5rem;
+    background: rgb(73, 72, 72);
+    flex: none;
+    display: flex;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    border: none;
+    border-style: none;
+    cursor: pointer;
+    outline: inherit;
+    }
+

@@ -6,7 +6,7 @@ const products = [
         category: 'kits',
         img: 'http://http2.mlstatic.com/D_963515-MLA31599914750_072019-O.jpg',
         stock: 10,
-        description: 'Descripción del kit 1'
+        description: 'El kit 1 es ideal para pieles secas ya que incluye una crema humectante, loción tonificante y protector solar. '
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ const products = [
         category: 'kits',
         img: 'http://http2.mlstatic.com/D_644840-MLA31150709063_062019-O.jpg',
         stock: 10,
-        description: 'Descripción del kit 2' 
+        description: 'El kit 2 es ideal para pieles grasas ya que incluye una crema humectante, loción tonificante y protector solar.' 
     },
     {
         id: 3,
@@ -24,14 +24,24 @@ const products = [
         category: 'productos',
         stock: 10,
         img: 'https://t1.uc.ltmcdn.com/es/posts/8/0/1/cada_cuanto_tiempo_se_deben_limpiar_las_esponjas_de_maquillaje_45108_0_600.jpg',
-        description: 'Descripción del producto esponja'
+        description: 'Este producto es indispensable para tu rutina diaria de limpieza y cuidado de la piel.'
     }  
 ]
 
-export const getProducts = () => {
+export const getProducts = (category) => {
+  
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(products)
+            category ? resolve(products.filter(prod => prod.category === category)) : resolve(products)
+        }, 2000)
+    })
+}
+
+export const getProductsById = (id) => {
+
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === parseInt(id))) 
         }, 2000)
     })
 }

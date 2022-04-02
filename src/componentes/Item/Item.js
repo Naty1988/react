@@ -1,31 +1,31 @@
-import ItemList from '../ItemList/ItemList';
 import './Item.css'
-import { getProducts } from "../../asyncmock";
-import { useState, useEffect } from "react";
+// import { getProducts } from "../../asyncmock";
+// import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom'
 
-const Item = () => {
+const Item = ({id, name, img, category, stock}) => {
 
-    const [products, setProducts ] = useState([])
-    useEffect(() => {
-getProducts().then(response => {
-    setProducts(response)
-})
-    }, [])
-    console.log(products)
+//     const [products, setProducts ] = useState([])
+//     useEffect(() => {
+// getProducts().then(response => {
+//     setProducts(response)
+// })
+//     }, [])
+//     console.log(products)
 
     return (
-        <div className="cardItemContainer">
-             {products.map(product => 
-                    <div className="cardItem" key={product.id}>
-                        <h1>{product.name}</h1>
-                        <img className="imgItem" src={product.img}/>
-                        <p>{product.category}</p>
-                        <button className="cardItemBtn" >Ver detalle del producto</button>
-                        <p>Stock disponible: {product.stock}</p>                                               
-                    </div>)}
+        <article className="cardItemContainer">
+            
+                    <div className="cardItem" key={id}>
+                        <h1>{name}</h1>
+                        <img className="imgItem" src={img} alt={name}/>
+                        <p>{category}</p>
+                        <Link to= {`/detail/${id}`} className="cardItemBtn">Ver detalle</Link>
+                        <p>Stock disponible: {stock}</p>                                               
+                    </div>
             
            
-        </div>
+        </article>
     )
 }
 export default Item
