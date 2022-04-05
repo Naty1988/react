@@ -25,9 +25,9 @@ const ItemDetailContainer = () => {
         return <h1>Cargando...</h1>
     }
 
-    console.log(product)
-    return (
+       return (
         <div>
+            <h1>Detalle del producto</h1>
             <ItemDetail {...product} />
         </div>
     )

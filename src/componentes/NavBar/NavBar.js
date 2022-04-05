@@ -1,17 +1,22 @@
 import CartWidget from "../CartWidget/CartWidget"
 import './NavBar.css'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const NavBar = () => {
     return (
         <nav>
-            <Link to='/'>
-                <h1>Mariela Graziano Maquillajes</h1>
+            <Link to='/' className='noDeco'>
+                <div className='boxLogo'>
+                    <picture>
+                    <img className='imgLogo' src='https://scontent.feze12-1.fna.fbcdn.net/v/t39.30808-6/241015061_4428122163918451_7219967911052860076_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=b419dz1F_tMAX82L_e4&_nc_ht=scontent.feze12-1.fna&oh=00_AT83hQ4BFr34E8m2U6OoRpxlP-UwwdT730M3CIoEHa77gQ&oe=62515E51'></img>
+                </picture>
+                <h1 className='title'>Mariela Graziano Maquillajes</h1>
+                </div>
             </Link>
-           <Link to='/category/productos'  className='Option' >Productos</Link>
+           <NavLink to='/category/productos' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Productos</NavLink>
             
-            <Link to='/category/articulos'className='Option' >Artículos</Link>
-            <Link to='/category/kits'className='Option' >Kits</Link>
+            <NavLink to='/category/accesorios'className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'} >Accesorios</NavLink>
+            <NavLink to='/category/kits'className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Kits</NavLink>
             <CartWidget />
         </nav>
     )
