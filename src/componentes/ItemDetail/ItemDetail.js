@@ -1,8 +1,11 @@
 import ItemCount from "../ItemCount/ItemCount"
 
-
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
-
+       
+    const onAdd = (quantity) => {
+        console.log(quantity)
+      }
+    
     return (
         <article className="cardItemContainer">
             
@@ -13,7 +16,8 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
                         <p>Descripción:{description}</p>
                         <p>${price}</p>
                         <p>Stock disponible: {stock}</p> 
-                        <ItemCount />                                              
+                         
+                          <ItemCount initial={0} stock={5} onAdd={onAdd} />                                       
                     </div>      
             </article>
     )
