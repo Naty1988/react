@@ -1,8 +1,13 @@
 import './ItemCount.css'
-import { useState } from 'react'
+import { useState, setCount } from 'react'
 
-const ItemCount = ({ initial = 0, stock, onAdd }) => {
+const ItemCount = ({ initial = 0, stock }) => {
     const [count, setCount] = useState(initial)
+
+    
+    const onAdd = (quantity) => {
+        console.log(quantity)
+      }
 
     const increment = () => {
         if (count < stock) {
@@ -16,6 +21,8 @@ const ItemCount = ({ initial = 0, stock, onAdd }) => {
         }
     }
 
+
+    
     return (
         <div className="boxCount">
             <button className="btnCount" onClick={decrement}>-</button>

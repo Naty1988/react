@@ -7,9 +7,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 
-  const onAdd = (quantity) => {
-    console.log(quantity)
-  }
 
   return (
     <div className="App">
@@ -19,7 +16,7 @@ function App() {
           <Route path='/' element={<ItemListContainer saludo="Bienvenido!" />} />
           <Route path='/category/:categoryId' element={<ItemListContainer saludo="Bienvenido!" />} />
           <Route path='/item/:productId' element={<ItemDetailContainer />} />
-          {/* <ItemCount initial={0} stock={5} onAdd={onAdd} /> */}
+        
         </Routes>
       </BrowserRouter>
     </div>
