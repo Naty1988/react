@@ -1,0 +1,22 @@
+.cartItemBtn {
+    border: solid 1px black;
+    background-color: gray;
+    color: white;
+    width: 150px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.cartBox {
+    text-decoration: none;
+    display: inline-block;
+    width: 80%;
+}
+
+.cartLine {
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}

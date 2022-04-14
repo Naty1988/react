@@ -46,7 +46,7 @@ const products = [
     },
     {
         id: 6,
-        name: 'kit 3',
+        name: 'Bincha',
         price: 700,
         category: 'accesorios',
         stock: 10,
