@@ -4,13 +4,13 @@ import ItemCount from "../ItemCount/ItemCount"
 import CartContext from '../../context/CartContext'
 
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
-  const [quantity, setQuantity] = useState(0)
 
-  const { addItem } = useContext(CartContext)
+
+  const { addItem, isInCart } = useContext(CartContext)
 
   const handleOnAdd = (count) => {
     console.log('Agregue al carrito')
-    setQuantity(count)
+  
     addItem({ id, name, price }, count)
   }
   return (
@@ -24,7 +24,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
         <p>${price}</p>
         <p>Stock disponible: {stock}</p>
 
-          {quantity === 0 ? <ItemCount onAdd={handleOnAdd} /> : <Link to='/cart' className="cardItemBtn">Terminar mi compra</Link>}
+          {isInCart(id) ? <Link to='/cart' className="cardItemBtn">Terminar mi compra</Link> : <ItemCount onAdd={handleOnAdd} />}
 
       </div>
     </article>
