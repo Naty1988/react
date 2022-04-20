@@ -1,5 +1,5 @@
 import { createContext, useState } from "react"
-import { getProducts } from "../asyncmock"
+// import { getProducts } from "../asyncmock"
 
 const Context = createContext()
 
