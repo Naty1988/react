@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { firestoreDb } from "../../services/firebase";
 import { getDoc, doc } from 'firebase/firestore'
 import { QuerySnapshot } from "firebase/firestore";
-import { querystring } from "@firebase/util";
+import { querytring } from "@firebase/util";
 
 const ItemDetailContainer = ({ addToCart, cart }) => {
     const [product, setProduct] = useState()
