@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
-import { firestoreDb } from "../../services/firebase";
-import { getDoc, doc } from 'firebase/firestore'
+import { getProductById } from "../../services/firebase/firestore";
 import { QuerySnapshot } from "firebase/firestore";
 import { querytring } from "@firebase/util";
 
@@ -15,25 +14,13 @@ const ItemDetailContainer = ({ addToCart, cart }) => {
     useEffect(() => {
         setLoading(true)
 
-        // getProductsById(productId).then(prod => {
-        //     setProduct(prod)
-        // }).catch(error => {
-        //     console.log(error)
-        // }).finally(() => {
-        //     setLoading(false)
-        // })
-
-        const docRef = doc(firestoreDb, 'products', productId)
-        getDoc(docRef).then(QuerySnapshot => {
-            console.log(QuerySnapshot)
-            const product = { id: QuerySnapshot.id, ...QuerySnapshot.data() }
-            setProduct(product)
+        getProductById(productId).then(prod => {
+            setProduct(prod)
         }).catch(error => {
             console.log(error)
         }).finally(() => {
             setLoading(false)
         })
-
     }, [productId])
 
     if (loading) {
