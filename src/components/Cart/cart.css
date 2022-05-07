@@ -4,7 +4,6 @@
     color: white;
     width: 150px;
     text-decoration: none;
-    padding: 10px;
 }
 
 .cartBox {
@@ -20,6 +19,35 @@
     align-items: center;
     margin: 20px;
 }
+
 .validation {
     visibility: hidden;
+}
+
+.button {
+    height: 40px;
+    width: 150px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: gray;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.align {
+    display: inline-grid;
+}
+
+.color {
+    color: white;
+}
+
+label {
+    margin: 20px;
+}
+
+input {
+    margin: 20px;
 }

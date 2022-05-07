@@ -74,7 +74,7 @@ export const createOrderAndUpdateStock = (cart, objOrder) => {
           }).then(() => {
               if(outOfStock.length === 0) {
                   const collectionRef = collection(firestoreDb, 'orders')
-                  return addDoc(collectionRef, objOrderWithTimestamp)
+                  return addDoc(collectionRef, objOrder)
               } else {
                   return Promise.reject({ name: 'outOfStockError', products: outOfStock})
               }

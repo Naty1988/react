@@ -36,7 +36,7 @@ const ItemListContainer = () => {
         })
     }, [categoryId])
 
-        return (
+    return (
         <div>
             {
                 loading ?

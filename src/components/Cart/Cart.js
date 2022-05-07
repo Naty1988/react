@@ -5,10 +5,6 @@ import { Link } from 'react-router-dom'
 import { createOrderAndUpdateStock } from "../../services/firebase/firestore"
 import { useNotification } from '../../notification/notification'
 
-
-
-
-
 const Cart = () => {
 
     const [loading, setLoading] = useState(false)
@@ -56,9 +52,9 @@ const Cart = () => {
 
     if (getQuantity() === 0) {
         return (
-            <div>
+            <div className="align">
                 <h1>Carrito vacio</h1>
-                <Link to='/'>Recorrer la tienda</Link>
+                <div className="button"><Link to='/' className="color">Recorrer la tienda</Link></div>
             </div>
         )
     }
@@ -67,7 +63,7 @@ const Cart = () => {
         <div>
             <h1>Cart</h1>
             <ul className="cartBox">
-                {cart.map(prod => <li className="cartLine" key={prod.id}> <img src={prod.img} />{prod.name} Precio unitario: $ {prod.price} X {prod.quantity} unidades Subtotal: $ {prod.price * prod.quantity}
+                {cart.map(prod => <li className="cartLine" key={prod.id}> {prod.name} Precio unitario: $ {prod.price} X {prod.quantity} unidades Subtotal: $ {prod.price * prod.quantity}
                     <button className="cartItemBtn" onClick={() => removeItem(prod.id)}>X</button>
                 </li>)}
             </ul>
@@ -75,7 +71,7 @@ const Cart = () => {
             <h1> Datos personales</h1>
             <div>
                 <form>
-                    <label > Nombre: </label>
+                    <label> Nombre: </label>
                     <input required type="text" id="name" name="name" onChange={e => setName(e.target.value)} />
                     <label>Teléfono: </label>
                     <input type="number" id="phone" name="phone" onChange={e => setPhone(e.target.value)} />

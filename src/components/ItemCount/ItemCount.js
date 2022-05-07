@@ -1,17 +1,22 @@
 import './ItemCount.css'
 import { useState } from 'react'
 
-const ItemCount = ({ onAdd, inicial = 1 }) => {
+const ItemCount = ({ onAdd, stock, inicial = 1 }) => {
     const [count, setCount] = useState(inicial)
 
     const increment = () => {
-        setCount(count + 1)
+        if (count < stock) {
+            setCount(count + 1)
+        }
     }
 
     const decrement = () => {
         if (count > 1) {
             setCount(count - 1)
         }
+    }
+    if (stock === 0) {
+        return <h1>no hay</h1>
     }
 
     return (

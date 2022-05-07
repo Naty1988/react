@@ -25,19 +25,18 @@ const Notification = ({ message, severity, otherClass}) => {
     const config = true ?
     {
         style: notificationStyles,
-        className: `${severity === 'success' ? 'Success' : 'Error'} ${otherClass || ''}`
+        className: `${severity === 'success' ? 'success' : 'Error'} ${otherClass || ''}`
     } : {}
 
-    return(
-        <div className='notificationModal'>
-      <div {...config}
-        // style={notificationStyles} className={`${severity === 'success' ? 'Success' : 'Error'} ${otherClass || ''}`}
-        >
+return(
+     <div className='notificationModal'>
+   <div {...config}
+>
            
-        {message}
-      </div>
-      </div>
-    )
+{message}
+ </div>
+ </div>
+)
 }
 
 const NotificationContext = createContext()
@@ -53,7 +52,7 @@ export const NotificationProvider = ({children}) => {
         setOtherClass(cls)
         setTimeout(() => {
             setMessage('')
-        }, 3000)
+        }, 4000)
     }
 
     return (
@@ -62,7 +61,6 @@ export const NotificationProvider = ({children}) => {
             {children}
         </NotificationContext.Provider>
     )
-
 }
 
 export const useNotification = () => {

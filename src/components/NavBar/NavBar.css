@@ -1,11 +1,9 @@
 nav {
-    width: 100px;
+    width: 100%;
+    height: auto;
     background-color: rgb(206, 206, 197);
     display: flex;
     text-align: center;
-    width: 100%;
-    margin-bottom: 10px;
-    display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -17,8 +15,8 @@ h1 {
 }
 
 button {
-    height: 30px;
-    width: 100px;
+    height: 20px;
+    width: 80px;
     margin: 10px;
     border: none;
     background-color: white;
@@ -27,8 +25,8 @@ button {
  img {
     height: 40px;
     width: 40px;       
-    margin-bottom: 10px;
-    margin: 20px;
+    margin-bottom: 5px;
+    margin: 10px;
     }
 
 .Option {
@@ -37,7 +35,7 @@ button {
     margin: 0 50px;
     width: 100px;
     padding: 5px;
-    font-size: 0,5rem;
+    font-size: 0,3rem;
     background: rgb(73, 72, 72);
     flex: none;
     display: flex;
@@ -58,7 +56,7 @@ button {
         margin: 0 50px;
         width: 100px;
         padding: 5px;
-        font-size: 0,5rem;
+        font-size: 0,3rem;
         background: rgb(221, 171, 171);
         flex: none;
         display: flex;
@@ -73,11 +71,10 @@ button {
         outline: inherit;
     }
     
-
-
 .imgLogo{
-     width: 100px;
-     height: 100px;
+     width: 80px;
+     height: 80px;
+     margin: 5px;
 }
 
 .boxLogo {
@@ -89,3 +86,7 @@ button {
     text-decoration: none;
 }
 
+
+a {
+    text-decoration: none;
+}
