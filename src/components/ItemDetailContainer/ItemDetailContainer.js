@@ -33,7 +33,6 @@ const ItemDetailContainer = ({ addToCart, cart }) => {
             <ItemDetail {...product} addToCart={addToCart} cart={cart} />
         </div>
     )
-
 }
 
 export default ItemDetailContainer

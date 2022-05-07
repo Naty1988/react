@@ -6,6 +6,7 @@
 .cardItem {
     border: solid 1px grey;
     padding: 50px;
+    margin: 20px;
 }
 
 .imgItem {
@@ -17,7 +18,7 @@
     border: solid 1px black;
     background-color: gray;
     color: white;
-    width: 150px;
+    width: 100px;
     text-decoration: none;
     padding: 10px;
 }

@@ -9,9 +9,7 @@ import Cart from './components/Cart/Cart';
 import { CartContextProvider } from './context/CartContext'
 import { NotificationProvider } from './notification/notification'
 
-
 function App() {
-
 
   return (
     <div className="App">
